@@ -4,4 +4,6 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
                         power, mod, )
 
 
-# Replace this with your code
+while True:
+    equation = input("Enter your equation > ")
+    print(equation)
