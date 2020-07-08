@@ -12,25 +12,36 @@ while True:
         print("You will exit.")
         break
 
+    result = None
+
     num1 = float(tokens[1])
     if len(tokens) > 2 :
         num2 = float(tokens[2])
 
     if operator == '+':
-        print(add(num1, num2))
+        result = (add(num1, num2))
+
     if operator == '-':
-        print(subtract(num1, num2))
+        result = (subtract(num1, num2))
+
     if operator == '*':
-        print(multiply(num1,num2))
+        result = (multiply(num1,num2))
+
     if operator == '/':
-        print(divide(num1, num2))
+        result = (divide(num1, num2))
+
     if operator == 'square':
-        print(square(num1))
+        result = (square(num1))
+
     if operator == 'cube':
-        print(cube(num1))
+        result = (cube(num1))
+
     if operator == 'pow':
-        print(power(num1, num2))
+        result = (power(num1, num2))
+
     if operator == 'mod':
-        print(mod(num1, num2))
+        result = (mod(num1, num2))
+
+    print(result)
 
 
