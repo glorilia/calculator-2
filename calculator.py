@@ -30,5 +30,7 @@ while True:
         print(cube(num1))
     if operator == 'pow':
         print(power(num1, num2))
+    if operator == 'mod':
+        print(mod(num1, num2))
 
 
