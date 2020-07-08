@@ -20,4 +20,7 @@ while True:
         print(add(num1, num2))
     if operator == '-':
         print(subtract(num1, num2))
+    if operator == '*':
+        print(multiply(num1,num2))
+
 
