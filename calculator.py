@@ -24,5 +24,7 @@ while True:
         print(multiply(num1,num2))
     if operator == '/':
         print(divide(num1, num2))
+    if operator == 'square':
+        print(square(num1))
 
 
