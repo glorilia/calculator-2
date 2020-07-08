@@ -7,17 +7,21 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
 while True:
     equation = input("Enter your equation > ")
     tokens = equation.split()
-    operator = tokens[0]
-    if operator == 'q':
+
+    if 'q' in tokens:
         print("You will exit.")
         break
 
+    operator, *nums = tokens
+
+    num1 = float(nums[0])
+    if len(nums) > 1 :
+        num2 = float(nums[1])
+
+
     result = None
 
-    num1 = float(tokens[1])
-    if len(tokens) > 2 :
-        num2 = float(tokens[2])
-
+    # Functionality of calculator
     if operator == '+':
         result = (add(num1, num2))
 
