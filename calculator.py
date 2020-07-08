@@ -22,5 +22,7 @@ while True:
         print(subtract(num1, num2))
     if operator == '*':
         print(multiply(num1,num2))
+    if operator == '/':
+        print(divide(num1, num2))
 
 
