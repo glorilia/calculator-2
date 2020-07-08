@@ -6,4 +6,8 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
 
 while True:
     equation = input("Enter your equation > ")
-    print(equation)
+    tokens = equation.split()
+    if tokens[0] == 'q':
+        print("You will exit.")
+        break
+
