@@ -28,5 +28,7 @@ while True:
         print(square(num1))
     if operator == 'cube':
         print(cube(num1))
+    if operator == 'pow':
+        print(power(num1, num2))
 
 
