@@ -26,5 +26,7 @@ while True:
         print(divide(num1, num2))
     if operator == 'square':
         print(square(num1))
+    if operator == 'cube':
+        print(cube(num1))
 
 
