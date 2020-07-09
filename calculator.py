@@ -50,26 +50,29 @@ while True:
     if operator == '+':
         result = (add(num1, num2))
 
-    if operator == '-':
+    elif operator == '-':
         result = (subtract(num1, num2))
 
-    if operator == '*':
+    elif operator == '*':
         result = (multiply(num1,num2))
 
-    if operator == '/':
+    elif operator == '/':
         result = (divide(num1, num2))
 
-    if operator == 'square':
+    elif operator == 'square':
         result = (square(num1))
 
-    if operator == 'cube':
+    elif operator == 'cube':
         result = (cube(num1))
 
-    if operator == 'pow':
+    elif operator == 'pow':
         result = (power(num1, num2))
 
-    if operator == 'mod':
+    elif operator == 'mod':
         result = (mod(num1, num2))
+
+    else:
+        result = "I don't know how to do what you're asking for."
 
     print(result)
 
