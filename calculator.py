@@ -47,25 +47,25 @@ while True:
         result = reduce(add, nums)
 
     elif operator == '-':
-        result = (subtract(num1, num2))
+        result = reduce(subtract, nums)
 
     elif operator == '*':
-        result = (multiply(num1,num2))
+        result = reduce(multiply, nums)
 
     elif operator == '/':
-        result = (divide(num1, num2))
+        result = reduce(divide, nums)
 
     elif operator == 'square':
-        result = (square(num1))
+        result = square(nums[0])
 
     elif operator == 'cube':
-        result = (cube(num1))
+        result = cube(nums[0])
 
     elif operator == 'pow':
-        result = (power(num1, num2))
+        result = reduce(power, nums)
 
     elif operator == 'mod':
-        result = (mod(num1, num2))
+        result = reduce(mod, nums)
 
     else:
         result = "I don't know how to do what you're asking for."
