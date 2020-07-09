@@ -16,19 +16,33 @@ while True:
 
     nums = {}
     
+    # Validating that inputs are numbers
     try:
-        for num in token_nums:
-            num = float(num)
+        for index, num in enumerate(token_nums):
+            key = "num" + str(index + 1)
+            value = float(num)
+            nums[key] = value
     except:
         print("Don't do that. You know better. Type a number.")
         continue
 
+    # If there were no number inputs
+    if nums == {}:
+        print("No numbers, no calculations.")
+        continue
 
+    # If there's 1 number and there should be two
+    if (operator in "+,-,*,/,pow,mod") and (len(nums) == 1):
+        print("You want to do that with one number? NO.")
+        continue
 
-    num1 = float(token_nums[0])
-    if len(token_nums) > 1 :
-        num2 = float(token_nums[1])
+    # if there's 2 numbers and there should be one
+    if (operator in "square,cube") and (len(nums) > 1):
+        print("I can only handle one number at a time for that.")
+        continue
 
+    num1 = nums['num1']
+    num2 = nums['num2']
 
     result = None
 
