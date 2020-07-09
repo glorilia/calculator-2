@@ -2,6 +2,7 @@
 
 from arithmetic import (add, subtract, multiply, divide, square, cube,
                         power, mod, )
+from functools import reduce
 
 
 while True:
@@ -14,20 +15,18 @@ while True:
 
     operator, *token_nums = tokens
 
-    nums = {}
+    nums = []
     
     # Validating that inputs are numbers
     try:
-        for index, num in enumerate(token_nums):
-            key = "num" + str(index + 1)
-            value = float(num)
-            nums[key] = value
+        for num in token_nums:
+            nums.append(float(num))
     except:
         print("Don't do that. You know better. Type a number.")
         continue
 
     # If there were no number inputs
-    if nums == {}:
+    if len(nums) == 0:
         print("No numbers, no calculations.")
         continue
 
@@ -41,14 +40,11 @@ while True:
         print("I can only handle one number at a time for that.")
         continue
 
-    num1 = nums['num1']
-    num2 = nums['num2']
-
     result = None
 
     # Functionality of calculator
     if operator == '+':
-        result = (add(num1, num2))
+        result = reduce(add, nums)
 
     elif operator == '-':
         result = (subtract(num1, num2))
