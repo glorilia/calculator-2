@@ -9,14 +9,25 @@ while True:
     tokens = equation.split()
 
     if 'q' in tokens:
-        print("You will exit.")
+        print("You will exit. No more calculator for you.")
         break
 
-    operator, *nums = tokens
+    operator, *token_nums = tokens
 
-    num1 = float(nums[0])
-    if len(nums) > 1 :
-        num2 = float(nums[1])
+    nums = {}
+    
+    try:
+        for num in token_nums:
+            num = float(num)
+    except:
+        print("Don't do that. You know better. Type a number.")
+        continue
+
+
+
+    num1 = float(token_nums[0])
+    if len(token_nums) > 1 :
+        num2 = float(token_nums[1])
 
 
     result = None
